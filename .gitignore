@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.so
+*.dll
+*.egg
+*.egg-info
+
+# Distribution / packaging
+.dist
+*.egg-info
+
+# PyInstaller
+*.spec
+
+# Unit test / coverage reports
+*.py[cod]
+*.coverage
+*.pyo
+.pytest_cache/
+htmlcov/
+
+# Django session files
+*.session-id
+
+# Compiled JavaScript output
+build/
+
+# Jupyter Notebook output
+.ipynb_checkpoints
+
+# DVC data files and directories
+.dvc/*
+data/*
