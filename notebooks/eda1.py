@@ -52,3 +52,25 @@ vehicle_columns = ['ItemType', 'Mmcode', 'VehicleType', 'RegistrationYear', 'Mak
 plan_columns = ['SumInsured', 'TermFrequency', 'CalculatedPremiumPerTerm', 'ExcessSelected', 'CoverCategory', 'CoverType', 'CoverGroup', 'Section', 'Product', 'StatutoryClass', 'StatutoryRiskType']
 payment_claim_columns = ['TotalPremium', 'TotalClaims']
 
+
+# Plot histograms for numerical columns
+plot_histograms(data, payment_claim_columns + ['SumInsured', 'CalculatedPremiumPerTerm'])
+
+# Plot correlation matrix for selected columns
+plot_correlation_matrix(data, payment_claim_columns + ['SumInsured'])
+
+# Detect outliers in numerical data
+numerical_columns = ['TotalPremium', 'TotalClaims', 'SumInsured', 'CalculatedPremiumPerTerm']
+plot_boxplots(data, columns=numerical_columns)
+
+# Plot scatter plots for analyzing relationships between premiums and claims
+plot_scatter(data, x='TotalPremium', y='TotalClaims')
+plot_scatter(data, x='CalculatedPremiumPerTerm', y='TotalClaims')
+
+# Plot box plots to analyze the impact of location and vehicle type on claims
+plot_boxplot(data, x='Province', y='TotalClaims')
+plot_boxplot(data, x='VehicleType', y='TotalClaims')
+
+# Plot bar plot to understand the distribution of premiums by vehicle type and gender
+plot_bar(data, x='VehicleType', y='TotalPremium', hue='Gender')
+
