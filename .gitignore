@@ -31,3 +31,4 @@ build/
 # DVC data files and directories
 .dvc/*
 data/*
+/data1
